@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.scene.image.Image;
 import java.util.Objects;
 
 public class Launcher extends Application {
@@ -19,9 +19,13 @@ public class Launcher extends Application {
 
         Scene scene = new Scene(rootNode);
 
-        stage.setTitle("Login page");
+        Image iconImage = new Image("assest/calculatorIcon.png");
+
+        stage.getIcons().add(iconImage);
+        stage.setTitle("Calculator");
         stage.centerOnScreen();
         stage.setScene(scene);
+
         stage.show();
     }
 }
