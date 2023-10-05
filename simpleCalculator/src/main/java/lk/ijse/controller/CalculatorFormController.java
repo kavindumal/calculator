@@ -68,12 +68,12 @@ public class CalculatorFormController {
         double valueOne = Integer.parseInt(labelTemp);
         double valueTwo = Integer.parseInt(labelTemp2);
 
-        if (calculate.equals("+")){
+        if (calculate.equals("+")) {
             total = valueOne + valueTwo;
         }
 
         if (total % 1 == 0) {
-            displayLbl.setText("" + (int)total);
+            displayLbl.setText("" + (int) total);
         } else {
             displayLbl.setText("" + total);
         }
