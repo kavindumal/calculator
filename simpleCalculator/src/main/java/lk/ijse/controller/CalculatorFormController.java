@@ -11,19 +11,31 @@ import javafx.scene.layout.AnchorPane;
 import java.util.ArrayList;
 
 public class CalculatorFormController {
-    @FXML
-    private AnchorPane calculatorPane;
 
     @FXML
     private JFXButton backSpaceBtn, cBtn, ceBtn, decimalBtn, divideBtn, eightBtn, equalBtn, fiveBtn, fourBtn,
-            historyBtn, multiplyBtn, nineBtn, oneBtn, oneDividedxBtn, percentageBtn, plusBtn, positiveOrNegativeBtn,
+            multiplyBtn, nineBtn, oneBtn, oneDividedxBtn, percentageBtn, plusBtn, positiveOrNegativeBtn,
             reduceBtn, rootBtn, sevenBtm, sixBtn, squareRootOfXBtn, threeBtn, twoBtn, zeroBtn;
+
+    @FXML
+    private AnchorPane calculatorPane;
 
     @FXML
     private Label displayLbl;
 
     @FXML
+    private ImageView historyBtn;
+
+    @FXML
     private ArrayList<JFXButton> buttons = new ArrayList<>();
+
+    String labelTemp = "";
+    String labelTemp2 = "";
+
+    int i = 0;
+    String calculate = "";
+
+    double total = 0;
 
     @FXML
     void backSpaceBtnOnAction(ActionEvent event) {
@@ -47,12 +59,24 @@ public class CalculatorFormController {
 
     @FXML
     void divideBtnOnAction(ActionEvent event) {
-
+        i = 1;
     }
 
     @FXML
     void equalBtnOnAction(ActionEvent event) {
+        i = 0;
+        double valueOne = Integer.parseInt(labelTemp);
+        double valueTwo = Integer.parseInt(labelTemp2);
 
+        if (calculate.equals("+")){
+            total = valueOne + valueTwo;
+        }
+
+        if (total % 1 == 0) {
+            displayLbl.setText("" + (int)total);
+        } else {
+            displayLbl.setText("" + total);
+        }
     }
 
     @FXML
@@ -62,7 +86,7 @@ public class CalculatorFormController {
 
     @FXML
     void multiplyBtnOnAction(ActionEvent event) {
-
+        i = 1;
     }
 
     @FXML
@@ -77,7 +101,9 @@ public class CalculatorFormController {
 
     @FXML
     void plusBtnOnAction(ActionEvent event) {
-
+        i = 1;
+        displayLbl.setText("+");
+        calculate = "+";
     }
 
     @FXML
@@ -87,7 +113,7 @@ public class CalculatorFormController {
 
     @FXML
     void reduceBtnOnAction(ActionEvent event) {
-
+        i = 1;
     }
 
     @FXML
@@ -103,7 +129,15 @@ public class CalculatorFormController {
     private void buttonClicked(ActionEvent event) {
         JFXButton clickedButton = (JFXButton) event.getSource();
         String buttonText = clickedButton.getText();
-        displayLbl.setText(buttonText);
+
+        if (i == 0){
+            labelTemp = labelTemp + buttonText;
+            displayLbl.setText(labelTemp);
+        } else if (i == 1) {
+            displayLbl.setText("");
+            labelTemp2 = labelTemp2 + buttonText;
+            displayLbl.setText(labelTemp2);
+        }
     }
 
     @FXML
