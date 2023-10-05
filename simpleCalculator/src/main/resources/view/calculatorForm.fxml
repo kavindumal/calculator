@@ -22,7 +22,7 @@
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="zeroBtn" layoutX="104.0" layoutY="591.0" onAction="#zeroBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="0" textFill="WHITE">
+      <JFXButton fx:id="zeroBtn" layoutX="104.0" layoutY="591.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="0" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
@@ -37,47 +37,47 @@
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="oneBtn" layoutX="5.0" layoutY="531.0" onAction="#oneBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="1" textFill="WHITE">
+      <JFXButton fx:id="oneBtn" layoutX="5.0" layoutY="531.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="1" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="twoBtn" layoutX="105.0" layoutY="531.0" onAction="#twoBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="2" textFill="WHITE">
+      <JFXButton fx:id="twoBtn" layoutX="105.0" layoutY="531.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="2" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="threeBtn" layoutX="204.0" layoutY="531.0" onAction="#threeBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="3" textFill="WHITE">
+      <JFXButton fx:id="threeBtn" layoutX="204.0" layoutY="531.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="3" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="fourBtn" layoutX="5.0" layoutY="471.0" onAction="#fourBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="4" textFill="WHITE">
+      <JFXButton fx:id="fourBtn" layoutX="5.0" layoutY="471.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="4" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="fiveBtn" layoutX="105.0" layoutY="471.0" onAction="#fiveBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="5" textFill="WHITE">
+      <JFXButton fx:id="fiveBtn" layoutX="105.0" layoutY="471.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="5" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="sixBtn" layoutX="204.0" layoutY="471.0" onAction="#sixBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="6" textFill="WHITE">
+      <JFXButton fx:id="sixBtn" layoutX="204.0" layoutY="471.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="6" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="nineBtn" layoutX="204.0" layoutY="411.0" onAction="#nineBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="9" textFill="WHITE">
+      <JFXButton fx:id="nineBtn" layoutX="204.0" layoutY="411.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="9" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="eightBtn" layoutX="105.0" layoutY="411.0" onAction="#eightBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="8" textFill="WHITE">
+      <JFXButton fx:id="eightBtn" layoutX="105.0" layoutY="411.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="8" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="sevenBtm" layoutX="5.0" layoutY="411.0" onAction="#sevenBtmOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="7" textFill="WHITE">
+      <JFXButton fx:id="sevenBtm" layoutX="5.0" layoutY="411.0" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text="7" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
