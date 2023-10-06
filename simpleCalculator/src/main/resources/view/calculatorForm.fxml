@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="calculatorPane" prefHeight="650.0" prefWidth="400.0" style="-fx-background-color: #1A212D;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CalculatorFormController">
    <children>
       <JFXButton fx:id="positiveOrNegativeBtn" layoutX="5.0" layoutY="591.0" onAction="#positiveOrNegativeBtnOnAction" opacity="0.5" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: #323232;" text=" " textFill="WHITE">
@@ -164,6 +163,11 @@
       <Label fx:id="displayLbl" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="154.0" prefHeight="73.0" prefWidth="382.0" text="0" textFill="WHITE" wrapText="true">
          <font>
             <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayLbl1" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="98.0" opacity="0.48" prefHeight="73.0" prefWidth="382.0" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="20.0" />
          </font>
       </Label>
    </children>

@@ -166,5 +166,10 @@
             <Font size="50.0" />
          </font>
       </Label>
+      <Label fx:id="displayLbl1" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="94.0" opacity="0.48" prefHeight="73.0" prefWidth="382.0" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

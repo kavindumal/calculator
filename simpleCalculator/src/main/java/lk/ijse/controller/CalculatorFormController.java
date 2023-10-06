@@ -29,8 +29,12 @@ public class CalculatorFormController {
     @FXML
     private ArrayList<JFXButton> buttons = new ArrayList<>();
 
+    @FXML
+    private Label displayLbl1;
+
     String labelTemp = "";
     String labelTemp2 = "";
+    String allLabels = "";
 
     int i = 0;
     String calculate = "";
@@ -65,6 +69,8 @@ public class CalculatorFormController {
     @FXML
     void equalBtnOnAction(ActionEvent event) {
         i = 0;
+
+        displayLbl1.setText(allLabels + " = ");
         double valueOne = Integer.parseInt(labelTemp);
         double valueTwo = Integer.parseInt(labelTemp2);
 
@@ -138,10 +144,12 @@ public class CalculatorFormController {
             labelTemp2 = labelTemp2 + buttonText;
             displayLbl.setText(labelTemp2);
         }
+        allLabels = labelTemp + " " + calculate + " " + labelTemp2 ;
+        displayLbl1.setText(allLabels);
     }
 
     @FXML
-    void initialize() {  //venama string ekak aram btn tika save krgnin
+    void initialize() {
         buttons.add(eightBtn);
         buttons.add(fiveBtn);
         buttons.add(fourBtn);
