@@ -70,7 +70,7 @@ public class CalculatorFormController {
     void equalBtnOnAction(ActionEvent event) {
         i = 0;
 
-        displayLbl1.setText(allLabels + " = ");
+        displayLbl1.setText(allLabels + " =  ");
         double valueOne = Integer.parseInt(labelTemp);
         double valueTwo = Integer.parseInt(labelTemp2);
 
