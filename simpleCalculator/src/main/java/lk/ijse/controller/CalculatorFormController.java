@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CalculatorFormController {
 
@@ -32,10 +33,14 @@ public class CalculatorFormController {
     @FXML
     private Label displayLbl1;
 
+    ArrayList<Double> arrayList = new ArrayList<>();
+    ArrayList<Double> totalArray = new ArrayList<>();
+
     String labelTemp = "";
     String labelTemp2 = "";
     String allLabels = "";
 
+    double changeValue = 0;
     int i = 0;
     String calculate = "";
 
@@ -68,20 +73,66 @@ public class CalculatorFormController {
 
     @FXML
     void equalBtnOnAction(ActionEvent event) {
-        i = 0;
+        changeValue = Double.parseDouble(labelTemp);
+        arrayList.add(changeValue); //array list ekata gtta
 
-        displayLbl1.setText(allLabels + " =  ");
-        double valueOne = Integer.parseInt(labelTemp);
-        double valueTwo = Integer.parseInt(labelTemp2);
+        displayLbl1.setText(allLabels + " = ");
 
         if (calculate.equals("+")) {
-            total = valueOne + valueTwo;
+            if (arrayList.size() == 2) {
+                total = arrayList.get(arrayList.size() - 1) + arrayList.get(arrayList.size() - 2);
+                totalArray.add(total);
+                if (totalArray.size() >= 2) {
+                    totalArray.add(totalArray.get(totalArray.size() - 1) + totalArray.get(totalArray.size() - 2));
+                } else {
+                    totalArray.add(total);
+                }
+            } else if (arrayList.size() > 2){
+                totalArray.add(totalArray.get(totalArray.size() - 1) + arrayList.get(arrayList.size() - 1));
+            }
+        } else if (calculate.equals("-")) {
+            if (arrayList.size() == 2) {
+                total = arrayList.get(arrayList.size() - 1) - arrayList.get(arrayList.size() - 2);
+                totalArray.add(total);
+                if (totalArray.size() >= 2) {
+                    totalArray.add(totalArray.get(totalArray.size() - 1) - totalArray.get(totalArray.size() - 2));
+                } else {
+                    totalArray.add(total);
+                }
+            } else if (arrayList.size() > 2){
+                totalArray.add(totalArray.get(totalArray.size() - 1) - arrayList.get(arrayList.size() - 1));
+            }
+        } else if (calculate.equals("*")) {
+            if (arrayList.size() == 2) {
+                total = arrayList.get(arrayList.size() - 1) * arrayList.get(arrayList.size() - 2);
+                totalArray.add(total);
+                if (totalArray.size() >= 2) {
+                    totalArray.add(totalArray.get(totalArray.size() - 1) * totalArray.get(totalArray.size() - 2));
+                } else {
+                    totalArray.add(total);
+                }
+            } else if (arrayList.size() > 2){
+                totalArray.add(totalArray.get(totalArray.size() - 1) * arrayList.get(arrayList.size() - 1));
+            }
+        } else if (calculate.equals("/")) {
+            if (arrayList.size() == 2) {
+                total = arrayList.get(arrayList.size() - 1) / arrayList.get(arrayList.size() - 2);
+                totalArray.add(total);
+                if (totalArray.size() >= 2) {
+                    totalArray.add(totalArray.get(totalArray.size() - 1) / totalArray.get(totalArray.size() - 2));
+                } else {
+                    totalArray.add(total);
+                }
+            } else if (arrayList.size() > 2){
+                totalArray.add(totalArray.get(totalArray.size() - 1) / arrayList.get(arrayList.size() - 1));
+            }
         }
 
-        if (total % 1 == 0) {
-            displayLbl.setText("" + (int) total);
+        //total eka double ekkda int ekakda blala print krnaw
+        if (totalArray.get(totalArray.size() - 1) % 1 == 0) {
+            displayLbl.setText("" + totalArray.get(totalArray.size() - 1).intValue());
         } else {
-            displayLbl.setText("" + total);
+            displayLbl.setText("" + totalArray.get(totalArray.size() - 1));
         }
     }
 
@@ -107,9 +158,11 @@ public class CalculatorFormController {
 
     @FXML
     void plusBtnOnAction(ActionEvent event) {
-        i = 1;
+        changeValue = Double.parseDouble(labelTemp);
+        arrayList.add(changeValue);
         displayLbl.setText("+");
         calculate = "+";
+        labelTemp = "";
     }
 
     @FXML
@@ -136,16 +189,11 @@ public class CalculatorFormController {
         JFXButton clickedButton = (JFXButton) event.getSource();
         String buttonText = clickedButton.getText();
 
-        if (i == 0){
-            labelTemp = labelTemp + buttonText;
-            displayLbl.setText(labelTemp);
-        } else if (i == 1) {
-            displayLbl.setText("");
-            labelTemp2 = labelTemp2 + buttonText;
-            displayLbl.setText(labelTemp2);
-        }
-        allLabels = labelTemp + " " + calculate + " " + labelTemp2 ;
-        displayLbl1.setText(allLabels);
+        labelTemp = labelTemp + buttonText;
+        displayLbl.setText(labelTemp);
+
+//        allLabels = labelTemp + " " + calculate + " " + labelTemp2 ;
+//        displayLbl1.setText(allLabels);
     }
 
     @FXML
