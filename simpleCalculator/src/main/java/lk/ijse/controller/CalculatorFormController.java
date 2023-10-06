@@ -68,7 +68,11 @@ public class CalculatorFormController {
 
     @FXML
     void divideBtnOnAction(ActionEvent event) {
-        i = 1;
+        changeValue = Double.parseDouble(labelTemp);
+        arrayList.add(changeValue);
+        displayLbl.setText("/");
+        calculate = "/";
+        labelTemp = "";
     }
 
     @FXML
@@ -143,7 +147,11 @@ public class CalculatorFormController {
 
     @FXML
     void multiplyBtnOnAction(ActionEvent event) {
-        i = 1;
+        changeValue = Double.parseDouble(labelTemp);
+        arrayList.add(changeValue);
+        displayLbl.setText("*");
+        calculate = "*";
+        labelTemp = "";
     }
 
     @FXML
@@ -172,7 +180,11 @@ public class CalculatorFormController {
 
     @FXML
     void reduceBtnOnAction(ActionEvent event) {
-        i = 1;
+        changeValue = Double.parseDouble(labelTemp);
+        arrayList.add(changeValue);
+        displayLbl.setText("-");
+        calculate = "-";
+        labelTemp = "";
     }
 
     @FXML
