@@ -56,10 +56,6 @@ Before running the application, ensure you have:
 3. Press `=` to calculate the result.
 4. Use `C` to clear the input.
 
-## Screenshots
-
-(Add screenshots of the application UI here)
-
 ## Contributing
 
 Contributions are welcome! Feel free to fork the repository and submit pull requests.
